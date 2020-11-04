@@ -9,7 +9,7 @@ En primer lugar realizamos la instalación siguiendo [este tutorial](https://doc
 docker --version
 ```
 
-en mi caso tengo la `19.03.13`. Ejecutamos el `hello-world`
+en mi caso tengo la `19.03.13`. Ejecutamos el docker `hello-world`:
 
 ```
 sudo docker run hello-world
@@ -58,10 +58,6 @@ docker run --rm jjmerelo/docker-daleksay -f smiling-octopus Uso argumentos, ea
 ```
 
 ![](./images/tema3/smiling-octopus.png)
-
-
-Busca una imagen de Docker llamada hello-world. Una imagen es equivalente a un disco de instalación que contiene los elementos que se van a aislar dentro del contenedor.
-Al no encontrar esa imagen localmente, la descarga del Hub de Docker, el lugar donde se suben las imágenes de Docker y donde puedes encontrar muchas más; más adelante se verán.
 
 **2. Tomar algún programa simple, “Hola mundo” impreso desde el intérprete de línea de órdenes, y comparar el tamaño de las imágenes de diferentes sistemas operativos base, Fedora, CentOS y Alpine, por ejemplo.**
 
