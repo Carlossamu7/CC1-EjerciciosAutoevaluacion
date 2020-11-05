@@ -146,6 +146,10 @@ docker run --rm fedora_python
 
 ![](./images/tema3/fedora.png)
 
+La comparación de tamaños es la siguiente:
+
+![](./images/tema3/tamanios.png)
+
 **3. Crear a partir del contenedor anterior una imagen persistente con `commit`.**
 
 **4. Examinar la estructura de capas que se forma al crear imágenes nuevas a partir de contenedores que se hayan estado ejecutando.**
