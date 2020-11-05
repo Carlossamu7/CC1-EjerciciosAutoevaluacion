@@ -152,6 +152,12 @@ La comparación de tamaños es la siguiente:
 
 **3. Crear a partir del contenedor anterior una imagen persistente con `commit`.**
 
+En mi caso lo he hecho para el contenedor que tengo de ubuntu. He ejecutado `docker ps -l`, cojo el ID del contenedor que quiero hacer persistente y posteriormente ejecuto `docker commit ID ubuntu_persistente`. Observemos:
+
+![](./images/tema3/commit.png)
+
+La nueva imagen `ubuntu_persistente` está creada.
+
 **4. Examinar la estructura de capas que se forma al crear imágenes nuevas a partir de contenedores que se hayan estado ejecutando.**
 
 **5. Crear un volumen y usarlo, por ejemplo, para escribir la salida de un programa determinado.**
