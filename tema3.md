@@ -160,6 +160,16 @@ La nueva imagen `ubuntu_persistente` está creada.
 
 **4. Examinar la estructura de capas que se forma al crear imágenes nuevas a partir de contenedores que se hayan estado ejecutando.**
 
+He encontrado [aquí](https://moidev.com/posts/docker-imagenes/) una orden para ver las capas de un docker:
+
+```
+docker image history ubuntu_persistente:latest
+```
+
+El resultado es el siguiente:
+
+![](./images/tema3/capas.png)
+
 **5. Crear un volumen y usarlo, por ejemplo, para escribir la salida de un programa determinado.**
 
 **6. Usar un miniframework REST para crear un servicio web y introducirlo en un contenedor, y componerlo con un cliente REST que sea el que finalmente se ejecuta y sirve como “frontend”.**
