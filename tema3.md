@@ -61,6 +61,91 @@ docker run --rm jjmerelo/docker-daleksay -f smiling-octopus Uso argumentos, ea
 
 **2. Tomar algún programa simple, “Hola mundo” impreso desde el intérprete de línea de órdenes, y comparar el tamaño de las imágenes de diferentes sistemas operativos base, Fedora, CentOS y Alpine, por ejemplo.**
 
+El programa "Hola mundo" es en Python, fichero [hola_mundo.py](./docs/tema3/alpine/hola_mundo.py), y el contenido es:
+
+```
+print("¡Hola mundo! Soy Carlos.")
+```
+
+##### Alpine #####
+
+El Dockerfile es el siguiente:
+
+```
+FROM python:alpine
+
+WORKDIR /home/carlos/Documentos/CC1-EjerciciosAutoevaluacion/docs/tema3/alpine
+
+COPY hola_mundo.py ./
+
+CMD python hola_mundo.py
+```
+
+Para construir el contenedor y hacerlo correr ejecutamos:
+
+```
+docker build -t alpine_python -f Dockerfile .
+docker run --rm alpine_python
+```
+
+![](./images/tema3/alpine.png)
+
+##### CentOS #####
+
+El Dockerfile es el siguiente:
+
+```
+FROM centos:latest
+
+WORKDIR /home/carlos/Documentos/CC1-EjerciciosAutoevaluacion/docs/tema3/centos
+
+COPY hola_mundo.py ./
+
+RUN dnf install python3 -y
+
+RUN python3 -V
+
+CMD python3 hola_mundo.py
+
+```
+
+Se ha ejecutado una orden para ver la versión de `Python3` instalada es la `3.6.8`. Para construir el contenedor y hacerlo correr ejecutamos:
+
+```
+docker build -t centos_python -f Dockerfile .
+docker run --rm centos_python
+```
+
+![](./images/tema3/centos1.png)
+![](./images/tema3/centos2.png)
+
+##### Fedora #####
+
+El Dockerfile es el siguiente:
+
+```
+FROM fedora:latest
+
+WORKDIR /home/carlos/Documentos/CC1-EjerciciosAutoevaluacion/docs/tema3/fedora
+
+COPY hola_mundo.py ./
+
+RUN dnf install python3
+
+RUN python3 -V
+
+CMD python3 hola_mundo.py
+```
+
+Se ha ejecutado una orden para ver la versión de `Python3` instalada es la `3.9.0`. Para construir el contenedor y hacerlo correr ejecutamos:
+
+```
+docker build -t fedora_python -f Dockerfile .
+docker run --rm fedora_python
+```
+
+![](./images/tema3/fedora.png)
+
 **3. Crear a partir del contenedor anterior una imagen persistente con `commit`.**
 
 **4. Examinar la estructura de capas que se forma al crear imágenes nuevas a partir de contenedores que se hayan estado ejecutando.**
