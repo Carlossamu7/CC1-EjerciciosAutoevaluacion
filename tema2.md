@@ -93,30 +93,3 @@ if __name__ == '__main__':
 El resultado de la ejecución es el siguiente:
 
 ![](./images/tema2/unittest.png)
-
-**5. *Ejercicio*: Haced los dos primeros pasos antes de pasar al tercero.**
-
-- Me registro a través de mi cuenta de GitHub.
-
-![](./images/tema2/travis_init.png)
-
-- Doy acceso al [repositorio](https://github.com/Carlossamu7/CC1-Conservatorio) del proyecto.
-
-- Creo el fichero `.travis.yml` para el lenguaje de programación Python indicando aquellas versiones que quiero:
-
-```
-language: python
-python:
-  - "3.5"
-  - "3.6"
-  - "3.7"
-  - "3.8"
-
-# command to install dependencies
-install:
-  - pip install -r requirements.txt
-
-# command to run tests
-script:
-  - pytest
-```
