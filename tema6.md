@@ -71,7 +71,7 @@ def hello_world():
     return '<h1>¡Hola Mundo!</h1>'
 
 @app.route('/<nombre>')
-def hello_world_nombre(nombre):
+def hello_name(nombre):
     return '<h1>¡Hola {}!</h1>'.format(nombre)
 
 if __name__ == "__main__":
@@ -89,6 +89,8 @@ Al acceder a http://127.0.0.1:5000/carlos:
 En la terminal observaríamos:
 
 ![](./images/tema6/flask.png)
+
+[Consultar código de `app.py`](./docs/tema6/app.py)
 
 **4. Crear pruebas para las diferentes rutas de la aplicación.**
 
