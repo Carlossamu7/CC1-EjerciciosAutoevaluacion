@@ -3,7 +3,17 @@
 
 **1.Instalar `etcd3`, averiguar qué bibliotecas funcionan bien con el lenguaje que estemos escribiendo el proyecto (u otro lenguaje), y hacer un pequeño ejemplo de almacenamiento y recuperación de una clave; hacer el almacenamiento desde la línea de órdenes (con `etcdctl`) y la recuperación desde el mini-programa que hagáis.**
 
-Sol.
+En primer lugar hay que realizar la instalación. Lo instalo en `Python`:
+
+```
+pip3 install etcd3
+```
+
+y en el shell:
+
+```
+sudo apt-get install etcd
+```
 
 **2. Realizar una aplicación básica que use `express` para devolver alguna estructura de datos del modelo que se viene usando en el curso.**
 
