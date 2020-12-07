@@ -8,6 +8,3 @@ def hello_world():
 @app.route('/<nombre>')
 def hello_name(nombre):
     return '<h1>¡Hola {}!</h1>'.format(nombre)
-
-if __name__ == "__main__":
-    app.run()

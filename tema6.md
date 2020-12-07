@@ -90,7 +90,7 @@ En la terminal observaríamos:
 
 ![](./images/tema6/flask.png)
 
-[Consultar código de `app.py`](./docs/tema6/app.py)
+[Consultar código de `app.py`](./docs/tema6/app.py).
 
 **4. Crear pruebas para las diferentes rutas de la aplicación.**
 
@@ -123,7 +123,7 @@ En la terminal observaríamos:
 
 ![](./images/tema6/test_flask.png)
 
-[Consultar código de `test_app.py`](./docs/tema6/test_app.py)
+[Consultar código de `test_app.py`](./docs/tema6/test_app.py).
 
 **5. Experimentar con diferentes gestores de procesos y servidores web front-end para un microservicio que se haya hecho con antelación, por ejemplo en la sección anterior.**
 
@@ -131,4 +131,39 @@ Sol.
 
 **6. Usar rake, invoke o la herramienta equivalente en tu lenguaje de programación para programar diferentes tareas que se puedan lanzar fácilmente desde la línea de órdenes.**
 
-Sol.
+```
+# Instala las dependencias
+install: requirements.txt
+	pipenv install --three
+	pipenv install -r requirements.txt
+
+# Comprueba sintaxis
+sintaxis:
+	pipenv run python3.8 app.py
+
+# Ejecuta los tests
+test:
+	# Tests unitarios e informe a través de report -m
+	pipenv run coverage run test_app.py -v
+	#pipenv run coverage report -m
+
+# Borra ficheros creados
+clean:
+	#rm -r ./docs/tema6/__pycache__
+	rm .coverage
+	rm Pipfile*
+```
+
+Fichero `requirements.txt` con las dependencias de esta aplicación.
+
+```
+Flask==1.1.2
+pipenv==11.9.0
+coverage==5.3
+```
+
+En la terminal observaríamos:
+
+![](./images/tema6/makefile.png)
+
+[Consultar código de `Makefile`](./docs/tema6/Makefile).
