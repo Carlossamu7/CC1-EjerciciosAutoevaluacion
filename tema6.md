@@ -94,7 +94,36 @@ En la terminal observaríamos:
 
 **4. Crear pruebas para las diferentes rutas de la aplicación.**
 
-Sol.
+Se han implementado un par de test unitarios para comprobar que `app.py` hace lo que tiene que hacer.
+
+```
+from app import app
+import unittest
+
+class TestApp(unittest.TestCase):
+
+    def setUp(self):
+        self.app = app.test_client()
+
+    def test_hello_world(self):
+        response = self.app.get('/')
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b'Hola Mundo!', response.data)
+
+    def test_hello_name(self):
+        response = self.app.get('/carlos')
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b'Hola carlos!', response.data)
+
+if __name__ == '__main__':
+    unittest.main()
+```
+
+En la terminal observaríamos:
+
+![](./images/tema6/test_flask.png)
+
+[Consultar código de `test_app.py`](./docs/tema6/test_app.py)
 
 **5. Experimentar con diferentes gestores de procesos y servidores web front-end para un microservicio que se haya hecho con antelación, por ejemplo en la sección anterior.**
 
