@@ -58,7 +58,7 @@ Al acceder a http://localhost:2000/apuestas:
 
 ![](./images/tema6/apuestas.png)
 
-**3. Programar un microservicio en express (o el lenguaje y marco elegido) que incluya variables como en el caso anterior.**
+**3. Programar un microservicio en `express` (o el lenguaje y marco elegido) que incluya variables como en el caso anterior.**
 
 He usado el *framework* `Flask` en `Python` de cara a familiarizarme con eĺ. Esto puede ser muy útil para el proyecto. En primer lugar lo instalo con `pip3 install flask`. He programado un *Hola Mundo* y un *Hola Nombre* que usa la dirección escogida como nombre. Veamos:
 
@@ -127,9 +127,27 @@ En la terminal observaríamos:
 
 **5. Experimentar con diferentes gestores de procesos y servidores web front-end para un microservicio que se haya hecho con antelación, por ejemplo en la sección anterior.**
 
-Sol.
+Siguiendo el material de teoría procedo a instalar `pm2` mediante `sudo npm i -g pm2`. Ahora puedo reproducir el ejemplo de teoría con `pm2 start 'gunicorn -w 4 -b 0.0.0.0:31415 HitosIV.hugitos:__hug_wsgi__ --log-file -'` cuyo resultado observamos a continuación:
 
-**6. Usar rake, invoke o la herramienta equivalente en tu lenguaje de programación para programar diferentes tareas que se puedan lanzar fácilmente desde la línea de órdenes.**
+![](./images/tema6/pm2_guicorn.png)
+
+Ahora vuelvo al ejemplo de las apuestas en donde se usaba `express`.
+
+```
+pm2 start index.js --name "songs" -i 2
+```
+
+![](./images/tema6/pm2_express.png)
+
+Para el ejemplo de la app en `Python` le tengo que indicar el intérprete. Veamos:
+
+```
+pm2 start app.py --name "app" -i 4 --interpreter python3.8
+```
+
+![](./images/tema6/pm2_python.png)
+
+**6. Usar `rake`, `invoke` o la herramienta equivalente en tu lenguaje de programación para programar diferentes tareas que se puedan lanzar fácilmente desde la línea de órdenes.**
 
 ```
 # Instala las dependencias
