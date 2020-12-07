@@ -60,7 +60,35 @@ Al acceder a http://localhost:2000/apuestas:
 
 **3. Programar un microservicio en express (o el lenguaje y marco elegido) que incluya variables como en el caso anterior.**
 
-Sol.
+He usado el *framework* `Flask` en `Python` de cara a familiarizarme con eĺ. Esto puede ser muy útil para el proyecto. En primer lugar lo instalo con `pip3 install flask`. He programado un *Hola Mundo* y un *Hola Nombre* que usa la dirección escogida como nombre. Veamos:
+
+```
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def hello_world():
+    return '<h1>¡Hola Mundo!</h1>'
+
+@app.route('/<nombre>')
+def hello_world_nombre(nombre):
+    return '<h1>¡Hola {}!</h1>'.format(nombre)
+
+if __name__ == "__main__":
+    app.run()
+```
+
+Al acceder a http://127.0.0.1:5000/:
+
+![](./images/tema6/hola_mundo.png)
+
+Al acceder a http://127.0.0.1:5000/carlos:
+
+![](./images/tema6/hola_nombre.png)
+
+En la terminal observaríamos:
+
+![](./images/tema6/flask.png)
 
 **4. Crear pruebas para las diferentes rutas de la aplicación.**
 
