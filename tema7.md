@@ -30,5 +30,4 @@ podman push <image_id> <docker-registry-username>/<docker-image-name>
 ```
 
 
-
 **2. Usar un miniframework REST para crear un servicio web y introducirlo en un contenedor, y componerlo con un cliente REST que sea el que finalmente se ejecuta y sirve como "frontend".**
