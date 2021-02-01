@@ -1,0 +1,15 @@
+version: '2'
+services:
+   server:
+      image: server
+      restart: always
+      ports:
+      - 4000:4000
+
+   client:
+      image: client
+      stdin_open: true
+      depends_on:
+        - server
+      ports:
+      - 4001:4001

@@ -1,0 +1,36 @@
+{
+    "alumnos" : [
+    	{
+        "nombre": "Carlos",
+    	  "email": "carlossamu7@correo.ugr.es",
+    	  "dni": "75931715K",
+        "lista_asignaturas" : ["Lenguaje Musical", "Coro"]
+      },
+      {
+        "nombre": "Luis",
+        "email": "luis@gmail.com",
+        "dni": "74585246H",
+        "lista_asignaturas" : ["Coro"]
+      }
+    ],
+    "asignaturas" : [
+      {
+        "id": "001",
+        "nombre_asignatura": "Lenguaje Musical",
+        "curso": 1,
+        "concepto": "Nociones básicas acerca de leer una partitura, entonar y hacer dictados",
+        "profesor": "JJ",
+        "horario": "L:16-17, X:16-17",
+        "aula": "Aula01"
+      },
+      {
+        "id": "002",
+        "nombre_asignatura": "Coro",
+        "curso": 1,
+        "concepto": "Nociones básicas acerca de canto",
+        "profesor": "JJ",
+        "horario": "M:20-21",
+        "aula": "Aula01"
+      }
+    ]
+}

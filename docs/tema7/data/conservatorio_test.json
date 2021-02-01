@@ -1,0 +1,30 @@
+{
+    "alumnos" : [
+      {
+        "nombre": "Pepe",
+        "email": "pepe@gmail.com",
+        "dni": "71254236Y",
+        "lista_asignaturas" : ["Lenguaje Musical"]
+      }
+    ],
+    "asignaturas" : [
+      {
+        "id": "003",
+        "nombre_asignatura": "Armonía",
+        "curso": 2,
+        "concepto": "Nociones de acordes",
+        "profesor": "Valdivia",
+        "horario": "V:16-18",
+        "aula": "Aula02"
+      },
+      {
+        "id": "002",
+        "nombre_asignatura": "Coro",
+        "curso": 1,
+        "concepto": "Nociones básicas acerca de canto",
+        "profesor": "Javi",
+        "horario": "V:20-21",
+        "aula": "Aula03"
+      }
+    ]
+}

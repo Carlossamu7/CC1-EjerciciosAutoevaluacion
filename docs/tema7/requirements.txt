@@ -1,0 +1,4 @@
+pipenv==11.9.0
+coverage==5.3
+flask==1.1.2
+python-dotenv==0.15.0
