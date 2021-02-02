@@ -315,4 +315,4 @@ conser = crea_conservatorio(data)
 
 if __name__ == '__main__':
     # Ejecutamos la app
-    app.run(debug=True, host=HOST, port=PORT)
+    app.run(debug=True, host="127.0.0.1", port=8000)

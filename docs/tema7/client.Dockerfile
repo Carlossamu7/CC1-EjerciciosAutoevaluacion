@@ -9,8 +9,10 @@ RUN useradd -m -s /bin/bash nonrootuser \
     && python3 -m pip install --upgrade pip \
     && apt-get update
 
+# Directorio de trabajo
 WORKDIR .
 
+# Fichero con los paquetes necesarios
 COPY ./src/client.py requirements_client.txt ./
 
 # Instalación de paquetes
@@ -20,7 +22,7 @@ RUN pip install -r requirements_client.txt \
 # Usamos el usuario creado
 USER nonrootuser
 
-# Abrir puerto 4001
-EXPOSE 4001
+# Abrir puerto 5001
+EXPOSE 8001
 
 CMD ["python3", "client.py"]

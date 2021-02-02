@@ -9,7 +9,7 @@ RUN useradd -m -s /bin/bash nonrootuser \
     && python3 -m pip install --upgrade pip
 
 # Directorio de trabajo
-WORKDIR /app/test
+WORKDIR .
 
 # Fichero con los paquetes necesarios
 COPY ./ ./
@@ -21,8 +21,8 @@ RUN pip install -r requirements.txt \
 # Usamos el usuario creado
 USER nonrootuser
 
-# Expongo el puerto 4000
-EXPOSE 4000
+# Expongo el puerto 5000
+EXPOSE 8000
 
 # Ejecutamos la API
 CMD ["python3", "./src/app.py"]
