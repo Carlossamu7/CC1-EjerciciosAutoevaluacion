@@ -22,7 +22,7 @@ RUN pip install -r requirements.txt \
 USER nonrootuser
 
 # Expongo el puerto 5000
-EXPOSE 8000
+EXPOSE 80
 
 # Ejecutamos la API
 CMD ["python3", "./src/app.py"]

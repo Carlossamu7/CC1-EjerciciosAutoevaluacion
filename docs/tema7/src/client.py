@@ -7,6 +7,4 @@ Implementación del cliente
 
 import requests
 
-print(requests.get("http://172.17.0.1:8000/", verify=True).json())
-#print(requests.get("http://localhost:4000/alumnos", verify=True).json())
-#print(requests.get("http://localhost:4000/asignaturas", verify=True).json())
+print(requests.get("http://172.17.0.1:80/", verify=True).json())
