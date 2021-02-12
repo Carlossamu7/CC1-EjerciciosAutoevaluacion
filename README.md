@@ -7,4 +7,4 @@ Repositorio para los ejercicios de autoevaluación de Cloud Computing: Fundament
 - [Ejercicios tema 4](https://github.com/Carlossamu7/CC1-EjerciciosAutoevaluacion/blob/main/tema4.md)
 - [Ejercicios tema 5](https://github.com/Carlossamu7/CC1-EjerciciosAutoevaluacion/blob/main/tema5.md)
 - [Ejercicios tema 6](https://github.com/Carlossamu7/CC1-EjerciciosAutoevaluacion/blob/main/tema6.md)
-- [Ejercicios tema 6](https://github.com/Carlossamu7/CC1-EjerciciosAutoevaluacion/blob/main/tema7.md)
+- [Ejercicios tema 7](https://github.com/Carlossamu7/CC1-EjerciciosAutoevaluacion/blob/main/tema7.md)
